@@ -1,4 +1,7 @@
-django-fakewall by Michael Huynh (mike@mikexstudios.com)
+django-fakewall
+===============
+http://github.com/mikexstudios/django-fakewall
+by Michael Huynh (mike@mikexstudios.com)
 
 Purpose:
 -------
@@ -20,7 +23,9 @@ How to use
     by running setup.py or installing through pip.
 
 2.  Edit settings.py and add `django_fakewall.middleware.FakewallMiddleware` to 
-    your `MIDDLEWARE_CLASSES`.
+    your `MIDDLEWARE_CLASSES`. Make sure that 
+    `django.contrib.sessions.middleware.SessionMiddleware` is also activated and
+    comes before the FakewallMiddleware.
 
 3.  Add the following settings to settings.py:
         #############################
